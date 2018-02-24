@@ -10,7 +10,7 @@
 // --- BEG User config ----------------------------------------------------------------------------------------
 
        int WW = 250; // Windows width
-       int HB = 36;  // Height of the buttons (29 – 42)
+       int HB = 38;  // Height of the buttons (29 – 42)
        int BH = 0;   // Start value for determining the window height.
 
        // DOOMSDAY PROPHECY
