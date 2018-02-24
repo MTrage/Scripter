@@ -60,7 +60,7 @@ void Scripter::startSHnow()
     }
     // The SH script is started.
     // ツ At eventuell following errors are from now on only you guilty!
-    system(qPrintable("sh " + SH + SR + ".sh"));
+    system(qPrintable("sh '" + SH + SR + ".sh'"));
 }
 
 // The backbone
