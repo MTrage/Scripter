@@ -8,9 +8,7 @@ Created 2.8.2016 by Marc-André Tragé
 Originally, I developed Scripter for myself. I needed a GUI with which I can easily start a variety of SH scripts quickly and easily. Scripter is constructed in such a way that, for example, Different Starticons can move to the Taskbar to work with different SH environments. If you start Scripter twice, it will automatically log and empty all Scripter TMP data. Thus one can switch Scripter on and off over the self start icon.
 
 ## Here are some examples for using Scripter:
-
 ![Values](https://github.com/MTrage/Scripter/blob/master/images/scripter.svg)
-
 ### Scripter [A] [B] [C]
 
 + [A]
