@@ -41,10 +41,6 @@ pidof
 wc
 
 ## For the creation of Scripters (++ the required packages).
-qmake
-make
-
-### You can create Scripter with:
 
     qmake && make
 
