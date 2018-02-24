@@ -9,6 +9,8 @@ Originally, I developed Scripter for myself. I needed a GUI with which I can eas
 
 ## Here are some examples for using Scripter:
 
+![Values](https://github.com/MTrage/Scripter/blob/master/images/scripter.svg)
+
 ### Scripter [A] [B] [C]
 
 + [A]
@@ -22,14 +24,14 @@ At this point, the path to Scripter must be specified.
 Here you enter the SH path to his scripts.
 
 ### Normal theme with 3 different SH paths
-Scripter 0 ~/Scripter-Home-Path/ ~/SH-Path-1/
-Scripter 0 ~/Scripter-Home-Path/ ~/SH-Path-2/
-Scripter 0 ~/Scripter-Home-Path/ ~/SH-Path-3/
+- Scripter 0 ~/Scripter-Home-Path/ ~/SH-Path-1/
+- Scripter 0 ~/Scripter-Home-Path/ ~/SH-Path-2/
+- Scripter 0 ~/Scripter-Home-Path/ ~/SH-Path-3/
 
 ### Dark theme with 3 different SH paths
-Scripter 0 ~/Scripter-Home-Path/ ~/SH-Path-1/
-Scripter 0 ~/Scripter-Home-Path/ ~/SH-Path-2/
-Scripter 0 ~/Scripter-Home-Path/ ~/SH-Path-3/
+- Scripter 0 ~/Scripter-Home-Path/ ~/SH-Path-1/
+- Scripter 0 ~/Scripter-Home-Path/ ~/SH-Path-2/
+- Scripter 0 ~/Scripter-Home-Path/ ~/SH-Path-3/
 
 ## The following programs are used by Scripter to create enjoyment.
 sh
