@@ -31,6 +31,8 @@ Here you enter the SH path to his scripts.
 - Scripter 0 ~/Scripter-Home-Path/ ~/SH-Path-2/
 - Scripter 0 ~/Scripter-Home-Path/ ~/SH-Path-3/
 
+![Theme](https://github.com/MTrage/Scripter/blob/master/images/theme.png)
+
 ## The following programs are used by Scripter to create enjoyment.
 sh
 rm
