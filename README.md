@@ -1,6 +1,7 @@
+![Scripter](https://github.com/MTrage/Scripter/blob/master/icon.png)
 # Scripter
 
-If you have many SH scripts and you have them in different folders or subfolders, you will love Scripter. Scripter sorts alphabetically and by hierarchy (also subfolders). Scripter sorts alphabetically and by hierarchy (also subfolders). 
+If you have many SH scripts and you have them in different folders or subfolders, you will love Scripter. Scripter sorts alphabetically and by hierarchy (also subfolders). Scripter sorts alphabetically and by hierarchy (also subfolders).
 
 Created 2.8.2016 by Marc-André Tragé
 
