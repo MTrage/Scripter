@@ -1,4 +1,4 @@
-﻿// Scripter is not on the same level as the wheel invention, but for me it is a useful tool.
+// Scripter is not on the same level as the wheel invention, but for me it is a useful tool.
 // but most rocket scientists are on this subject some "a useful tool is a valuable thing". °)
 
 #include "scripter.h"
@@ -12,6 +12,8 @@
        int WW = 250; // Windows width
        int HB = 38;  // Height of the buttons (29 – 42)
        int BH = 0;   // Start value for determining the window height.
+
+       QString sudo = "gksu"; // SUDO GUI
 
        // DOOMSDAY PROPHECY
        QString CA = "Scripter Alert";
@@ -46,6 +48,20 @@ void Scripter::alert(QString a, QString b)
 }
 
 // Run the SH fun
+void Scripter::startSHnowSUDO()
+{
+    QYN* SG = qobject_cast<QYN*>(sender());
+    QString buttonText = SG->text();
+
+    QFile CS(SH + SR + ".sh");
+    SR = buttonText.remove(0, 1);
+
+    if (!CS.exists()){
+        SH = SH+"/";
+    }
+    system(qPrintable(sudo + " " + "sh '" + SH + SR + ".shs'"));
+}
+
 void Scripter::startSHnow()
 {
     QYN* SG = qobject_cast<QYN*>(sender());
@@ -54,14 +70,12 @@ void Scripter::startSHnow()
     QFile CS(SH + SR + ".sh");
     SR = buttonText.remove(0, 1);
 
-    // Check if the path was entered with or without a slash.
     if (!CS.exists()){
         SH = SH+"/";
     }
-    // The SH script is started.
-    // ツ At eventuell following errors are from now on only you guilty!
     system(qPrintable("sh '" + SH + SR + ".sh'"));
 }
+
 
 // The backbone
 Scripter::Scripter(QWidget *parent)  :
@@ -155,7 +169,8 @@ Scripter::Scripter(QWidget *parent)  :
         alert(CA,CB);
      }
     else{
-        system(qPrintable("find " + SH + " -name '*.sh' -printf ' %p\n' | sort > /tmp/Scripter-List"));
+        system(qPrintable("find " + SH + " -name '*.sh*' -printf ' %p\n' | sort > /tmp/Scripter-List"));
+        //system(qPrintable("find " + SH + " -name '*.shs' -printf ' %p\n' | sort >> /tmp/Scripter-List"));
     }
 
     QFile file("/tmp/Scripter-List");
@@ -163,20 +178,40 @@ Scripter::Scripter(QWidget *parent)  :
         return;
     QTextStream in(&file);
     QString line = in.readLine();
-    while (!line.isNull()) {
-        BH++;
-        QYN *button = new QYN(this);
-        line.replace(".sh","");
-        line.replace(SH+"/","");
-        line.replace(SH,"");
-        button->setText(line);
-        ui->verticalLayout->addWidget(button);
-// 1 & 2 buttons height adjustment
-        if(BH < 2){
-            BH = BH+1;
-        }
-        QWidget::setFixedHeight(BH*HB);
-        connect(button, SIGNAL(clicked()), this, SLOT(startSHnow()));
+
+// with SUDO CHECK
+// *.sh  = normal start
+// *.shs = start Script with GKSUDO
+
+        while (!line.isNull()) {
+            BH++;
+            QYN *button = new QYN(this);
+            if(line.contains(".shs")){
+                line.replace(".shs","");
+                line.replace(SH+"/","");
+                line.replace(SH,"");
+                button->setText(line);
+                ui->verticalLayout->addWidget(button);
+                // 1 & 2 buttons height adjustment
+                if(BH < 2){
+                    BH = BH+1;
+                }
+                QWidget::setFixedHeight(BH*HB);
+                connect(button, SIGNAL(clicked()), this, SLOT(startSHnowSUDO()));
+            }
+            if(line.contains(".sh")){
+                line.replace(".sh","");
+                line.replace(SH+"/","");
+                line.replace(SH,"");
+                button->setText(line);
+                ui->verticalLayout->addWidget(button);
+                // 1 & 2 buttons height adjustment
+                if(BH < 2){
+                    BH = BH+1;
+                }
+                QWidget::setFixedHeight(BH*HB);
+                connect(button, SIGNAL(clicked()), this, SLOT(startSHnow()));
+            }
         line = in.readLine();
     }
     QWidget::setFixedWidth(WW);
