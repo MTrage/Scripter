@@ -18,6 +18,7 @@ public:
 private slots:
     void alert(QString a, QString b);
     void startSHnow();
+    void startSHnowSUDO();
     void TMPkiller();
     void LittleKiller(QString a);
 
