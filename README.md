@@ -21,30 +21,34 @@ At this point, the path to Scripter must be specified.
 + [C]
 Here you enter the SH path to his scripts.
 
+### Scripter & superuser do
+- Scripts which should be started normally must have the suffix "***.sh**".
+- Scripts that require support from sudo must have the suffix "***.shs**".
+
 ### Normal theme with 3 different SH paths
-- Scripter 0 ~/Scripter-Home-Path/ ~/SH-Path-1/
-- Scripter 0 ~/Scripter-Home-Path/ ~/SH-Path-2/
-- Scripter 0 ~/Scripter-Home-Path/ ~/SH-Path-3/
+    - Scripter 0 ~/Scripter-Home-Path/ ~/SH-Path-1/
+    - Scripter 0 ~/Scripter-Home-Path/ ~/SH-Path-2/
+    - Scripter 0 ~/Scripter-Home-Path/ ~/SH-Path-3/
 
 ### Dark theme with 3 different SH paths
-- Scripter 0 ~/Scripter-Home-Path/ ~/SH-Path-1/
-- Scripter 0 ~/Scripter-Home-Path/ ~/SH-Path-2/
-- Scripter 0 ~/Scripter-Home-Path/ ~/SH-Path-3/
+    - Scripter 1 ~/Scripter-Home-Path/ ~/SH-Path-1/
+    - Scripter 1 ~/Scripter-Home-Path/ ~/SH-Path-2/
+    - Scripter 1 ~/Scripter-Home-Path/ ~/SH-Path-3/
 
 ![Theme](https://github.com/MTrage/Scripter/blob/master/images/theme.png)
 
-## The following programs are used by Scripter to create enjoyment.
-sh
-rm
-find
-sort
-echo
-killall
-pidof
-wc
-
+## The following programs are used by Scripter to create enjoyment.°)
+- [x] sh
+- [x] rm
+- [x] find
+- [x] sort
+- [x] echo
+- [x] killall
+- [x] pidof
+- [x] wc
+- [x] gksu
 ## For the creation of Scripters (++ the required packages).
 
     qmake && make
 
-Before starting Scripter, please note that all 3 parameters have been specified, see examples above.
+# Before starting Scripter, please note that all 3 parameters have been specified, see examples above.
